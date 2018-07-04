@@ -1,0 +1,10 @@
+D:\vsProjects\TestAuthority\Entity\bin\Debug\Entity.dll.config
+D:\vsProjects\TestAuthority\Entity\bin\Debug\Entity.dll
+D:\vsProjects\TestAuthority\Entity\bin\Debug\Entity.pdb
+D:\vsProjects\TestAuthority\Entity\bin\Debug\EntityFramework.dll
+D:\vsProjects\TestAuthority\Entity\bin\Debug\EntityFramework.SqlServer.dll
+D:\vsProjects\TestAuthority\Entity\bin\Debug\EntityFramework.xml
+D:\vsProjects\TestAuthority\Entity\bin\Debug\EntityFramework.SqlServer.xml
+D:\vsProjects\TestAuthority\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
+D:\vsProjects\TestAuthority\Entity\obj\Debug\Entity.dll
+D:\vsProjects\TestAuthority\Entity\obj\Debug\Entity.pdb
