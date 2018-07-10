@@ -16,17 +16,16 @@ namespace TestAuthority.Controllers
         public UserTable Person { get; set; }
         public Message message = new Message();
 
-        protected override IAsyncResult BeginExecute(RequestContext requestContext, AsyncCallback callback, object state)
+        protected override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            if (requestContext.HttpContext.Session["user"] == null)
+            if (filterContext.HttpContext.Session["user"] == null)
             {
-                Redirect("/Login/Index");
+                filterContext.HttpContext.Response.Redirect("/Login/Index");
             }
             else
             {
-                Person = requestContext.HttpContext.Session["user"] as UserTable;
+                Person = filterContext.HttpContext.Session["user"] as UserTable;
             }
-            return base.BeginExecute(requestContext, callback, state);
         }
         public string Form(string name)
         {

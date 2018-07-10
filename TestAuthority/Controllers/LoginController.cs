@@ -8,7 +8,7 @@ using EFCore.IBLL;
 
 namespace TestAuthority.Controllers
 {
-    public class LoginController : BaseController
+    public class LoginController : Controller
     {
         // GET: Login
         private IUserTableBLL _userBLL;
@@ -23,7 +23,8 @@ namespace TestAuthority.Controllers
         [HttpPost]
         public string LoginCheck()
         {
-            string userName = Form("userName");
+            BaseController.Message message = new BaseController.Message();
+            string userName = Request.Form["userName"];
             var model = _userBLL.GetModel(p => p.UserName == userName);
             if (model == null)
             {
@@ -37,7 +38,7 @@ namespace TestAuthority.Controllers
                 message.status = 1;
                 message.msg = "登陆成功";
             }
-            return GetJsonString(message);
+            return new BaseController().GetJsonString(message);
         }
     }
 }
